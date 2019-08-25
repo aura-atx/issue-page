@@ -1,0 +1,38 @@
+* Issue Landing Page
+ 
+** Purpose
+   This would be a landing page that we could use in the future whenever there
+   is an issue that want to promote and inform the public on. It would be
+   usefull to be able to quickly deploy a webpage on any given issue.
+
+** Features
+
+   - explainer text with background on the issue and why people should care
+     
+   - Form for collecting info of people who want to connect and future info
+
+   - Auto send emails to user's representatives with boilerplate text in support
+     of issue
+
+   - Find/Provide people's council members and other reps based on address or
+     location data
+
+     * early version will likely just have a checkbox for people to decide which
+       CMs they want to send a message to
+
+   - Send email from user's email to everyone you have checked on our form
+** Implementation
+   - Backend
+     I will be implementing this with Django
+
+   - Frontend
+     My design skills are rather lacking so if anyone wants to build how this
+     would look with html, css, javascript, bootstrap, etc. this is probably the
+     easiest entry point
+
+   - Location to Rep functionallity
+     Not sure how hard it will be to get council and other representatives based
+     on someones location. I suspect there is a public api to make this easy but
+     I don't know. If anyone wants to figure out how to get this to build this
+     functionality it would be greatly appreciated
+
