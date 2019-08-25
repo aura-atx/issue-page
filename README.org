@@ -22,17 +22,18 @@
 
    - Send email from user's email to everyone you have checked on our form
 ** Implementation
-   - Backend
+
+*** Backend
      I will be implementing this with Django
 
-   - Frontend
-     My design skills are rather lacking so if anyone wants to build how this
-     would look with html, css, javascript, bootstrap, etc. this is probably the
-     easiest entry point
+*** Frontend
+    My design skills are rather lacking so if anyone wants to build how this
+    would look with html, css, javascript, bootstrap, etc. this is probably the
+    easiest entry point
 
-   - Location to Rep functionallity
-     Not sure how hard it will be to get council and other representatives based
-     on someones location. I suspect there is a public api to make this easy but
-     I don't know. If anyone wants to figure out how to get this to build this
-     functionality it would be greatly appreciated
+*** Location to Rep functionallity
+   Not sure how hard it will be to get council and other representatives based
+   on someones location. I suspect there is a public api to make this easy but
+   I don't know. If anyone wants to figure out how to get this to build this
+   functionality it would be greatly appreciated
 
