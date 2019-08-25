@@ -9,7 +9,8 @@
 
    - explainer text with background on the issue and why people should care
      
-   - Form for collecting info of people who want to connect and future info
+   - Form for collecting info of people who want to connect and be informed of
+     future action
 
    - Auto send emails to user's representatives with boilerplate text in support
      of issue
@@ -33,7 +34,7 @@
 
 *** Location to Rep functionallity
    Not sure how hard it will be to get council and other representatives based
-   on someones location. I suspect there is a public api to make this easy but
-   I don't know. If anyone wants to figure out how to get this to build this
-   functionality it would be greatly appreciated
+   on someones location. I suspect there is a public api to make this easy but I
+   don't know. If anyone wants to figure out how to build this functionality it
+   would be greatly appreciated
 
