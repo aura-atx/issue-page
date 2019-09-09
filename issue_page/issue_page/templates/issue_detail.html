@@ -1,0 +1,102 @@
+{% extends "_base.html" %}
+
+{% block title %} {{ issue.name }} {% endblock %}
+
+{% block content %}
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-6">
+                <h1>{{ issue.name }}</h1>
+                <p>{{ issue.text }}</p>
+            </div>
+            <div class="col-6">
+                <div class="border border-danger p-3 mt-3 mb-3">
+                    <h2>Take Action Now</h2>
+                    <form class="mt-3" action="/send_message" method="post">
+                        {% csrf_token %}
+                        <div class="form-group">
+                            <h4>Customize Your Message</h4>
+                            <textarea type="text" class="form-control" id="message" rows="10">{{ issue.text }}</textarea>
+                        </div>
+                        <div>
+                            <h4>Enter Your Info</h4>
+                            <div class="form-group">
+                                <label for="name">Name: </label>
+                                <input type="text" class="form-control" id="name">
+                            </div>
+                            <div class="form-group">
+                                <label for="address">Address: </label>
+                                <input type="text" class="form-control" id="address">
+                            </div>
+                            <div class="form-group">
+                                <label for="zip">Zip: </label>
+                                <input type="text" class="form-control" id="zip">
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email: </label>
+                                <input type="text" class="form-control" id="email">
+                            </div>
+                        </div>
+                        <div>
+                            <h4>Choose Your Representative</h4>
+                            <div class="form-group">
+                                <label for="mayor">Mayor Steve Addler</label>
+                                <input type="checkbox" name="mayor">
+                            </div>
+                            <div class="form-group">
+                                <label for="council">All city council members</label>
+                                <input type="checkbox" name="council">
+                            </div>
+                        </div>
+                        <button type="submit">Send Your Message</button>
+                    </form>
+                </div>
+                <div class="border border-danger" class="p-3 mt-3 mb-3">
+                    <h2>Keep In Touch</h2>
+                    <form action="/get_info" method="post">
+                        {% csrf_token %}
+                        <div class="form-group">
+                            <label for="name">Name: </label>
+                            <input type="text" id="info_name">
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email: </label>
+                            <input type="text" id="info_email">
+                        </div>
+                        <div class="form-group">
+                            <input type="checkbox" id="issue">
+                            <label for="issue">Send me messages from Aura about this issue</label>
+                        </div>
+                        <div class="form-group">
+                            <input type="checkbox" id="newsletter">
+                            <label for="newsletter">Sign me up for the AURA newsletter</label>
+                        </div>
+                        <button id="get_info" type="submit">Submit</button>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+<script>
+    document.getElementById("get_info").addEventListener('click', get_info)
+    
+    function get_info() {
+        var name = document.getElementById("info_name").value;
+        var email = document.getElementById("info_email").value;
+        var name = document.getElementById("issue").value;
+        var name = document.getElementById("newsletter").value;
+
+        httpRequest = new XMLHttpRequest();
+
+        if (!httpRequest){
+            return false;
+        }
+
+        httpRequest.open('POST', '/get_info')
+        httpRequest.se
+
+    }
+</script>
